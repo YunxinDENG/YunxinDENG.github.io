@@ -82,23 +82,23 @@
             "long": 138.2529,
             "name": "Japan",
             "label":{
-              "position":"left", 
-              "anchor":"right-bottom"}
+              "position":"bottom", 
+              "anchor":"bottom"}
           },
           {
             "lat": 14.058324,
             "long": 108.277199,
             "name": "Vietnam",
             "label":{
-              "position":"left", 
-              "anchor":"right-bottom"}
+              "position":"bottom", 
+              "anchor":"left-top"}
           },
           {
-            "lat": 23.15792,
-            "long": 113.27324,
+            "lat": 20.59368,
+            "long": 78.9628,
             "name": "India",
             "label":{
-              "position":"left", 
+              "position":"bottom", 
               "anchor":"right-bottom"}
           },
           {
@@ -107,7 +107,7 @@
             "name": "Netherlands",
             "label":{
               "position":"left", 
-              "anchor":"right-bottom"}
+              "anchor":"right-top"}
           },
           {
             "lat": 51.165691,
@@ -122,16 +122,16 @@
             "long": 101.9758,
             "name": "Malaysia",
             "label":{
-              "position":"bottom", 
-              "anchor":"bottom"}
+              "position":"left", 
+              "anchor":"right-bottom"}
           },
           {
             "lat": 55.37805,
             "long": -3.436,
             "name": "United Kingdom",
             "label":{
-              "position":"left", 
-              "anchor":"left-top"}
+              "position":"bottom", 
+              "anchor":"right-bottom"}
           },
           {
             "lat": 23.6345,
@@ -163,7 +163,7 @@
             "name": "Singapore",
             "label":{
               "position":"left", 
-              "anchor":"right-bottom"}
+              "anchor":"left-top"}
           },
           {
             "lat": 15.87003,
@@ -203,7 +203,7 @@
             "name": "Italy",
             "label":{
               "position":"left", 
-              "anchor":"right-bottom"}
+              "anchor":"right-top"}
           },
           {
             "lat": 12.879721,
@@ -211,7 +211,7 @@
             "name": "Philippines",
             "label":{
               "position":"left", 
-              "anchor":"right-bottom"}
+              "anchor":"left-top"}
           }
         ]
         // create connector series
@@ -267,25 +267,25 @@
         connectorSeries
           .markers()
           .position('100%')
-          .size(20)
+          .size(10)
           .fill(color)
-          .stroke('2 #E1E1E1');
+          .stroke('1 #E1E1E1');
 
         connectorSeries
           .hovered()
           .markers()
           .position('100%')
-          .size(20)
+          .size(10)
           .fill('#212121')
-          .stroke('2 #455a64');
+          .stroke('1 #455a64');
 
-        if (name === 'More than 12%') {
+        if (name === 'More than 18%') {
           connectorSeries.startSize(9).endSize(3.5);
-        } else if (name === '10 - 12%') {
+        } else if (name === '13 - 18%') {
           connectorSeries.startSize(7).endSize(2.5);
-        } else if (name === '7 - 10%') {
+        } else if (name === '9- 13%') {
           connectorSeries.startSize(5).endSize(1.5);
-        } else if (name === '3 - 7%') {
+        } else if (name === '4 - 9%') {
           connectorSeries.startSize(3).endSize(0.5);
         } else {
           connectorSeries.startSize(0.5).endSize(0.23);
@@ -346,23 +346,23 @@
         '#64b5f6'
       );
       createSeries(
-        '3 - 7%',
-        exportDataSet.filter('percent', filterFunction(0.0331, 0.0784)),
+        '3 - 9%',
+        exportDataSet.filter('percent', filterFunction(0.03, 0.09)),
         '#1976d2'
       );
       createSeries(
-        '7 - 10%',
-        exportDataSet.filter('percent', filterFunction(0.0784, 0.1011)),
+        '9 - 13%',
+        exportDataSet.filter('percent', filterFunction(0.09, 0.13)),
         '#355CB1'
       );
       createSeries(
-        '10 - 12%',
-        exportDataSet.filter('percent', filterFunction(0.1011, 0.1238)),
+        '13 - 18%',
+        exportDataSet.filter('percent', filterFunction(0.13, 0.18)),
         '#5C3883'
       );
       createSeries(
-        'More than 12%',
-        exportDataSet.filter('percent', filterFunction(0.1238,0.15)),
+        'More than 18%',
+        exportDataSet.filter('percent', filterFunction(0.18,0.21)),
         '#880e4f'
       );
 
